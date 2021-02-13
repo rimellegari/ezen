@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins' ;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7ABCA0;
+    color: white;
+}
+
+/*primeira paleta
+    background-color: #BCCFFC;
+    color: #4F52FF;*/
+.navbar-links li {
+    list-style: none;
+    display: flex;
+
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0%;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 1rem; /*espaçar itens da navbar*/
+    display: block;
+
+}
+
+.navbar-links li:hover {
+    background-color: #428267;
+}
+.brand {
+    font-size: 1.5rem;
+    margin: .5rem;
+    font-weight: bold;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 0.75em;
+    right: 1rem;
+    display: none;
+    flex-direction: column; /*empilhar traços do burger menu*/
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 500px) {
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+    .navbar-links.active {
+        display: flex;
+    }
+}
